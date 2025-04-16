@@ -28,19 +28,17 @@
 
     #controls {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       margin-bottom: 20px;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: flex-end;
+      align-items: baseline;
     }
 
-    .input-group, .button-group {
+    .input-group {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-end;
-      height: 110px;
     }
 
     .input-label {
@@ -62,6 +60,12 @@
 
     input {
       width: 80px;
+    }
+
+    .button-group {
+      display: flex;
+      align-items: center;
+      height: 66px;
     }
 
     button {
@@ -137,7 +141,7 @@
 </head>
 <body>
 
-  <h1 id="page-title">Countdown</h1>
+  <h1 id="page-title">Countdown di Nino</h1>
 
   <div id="controls">
     <div class="input-group">
