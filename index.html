@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Countdown di Nino</title>
+  <title>Countdown Fullscreen con Banner</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
@@ -28,18 +28,19 @@
 
     #controls {
       display: flex;
-      gap: 14px;
+      gap: 10px;
       margin-bottom: 20px;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: baseline;
+      align-items: center
     }
-
-    .input-group {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+      
+      .input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
     .input-label {
       margin-top: 6px;
@@ -60,12 +61,6 @@
 
     input {
       width: 80px;
-    }
-
-    .button-group {
-      display: flex;
-      align-items: center;
-      height: 66px;
     }
 
     button {
@@ -123,6 +118,7 @@
       transform: scale(1.05);
     }
 
+    /* Banner pubblicitario fisso in basso */
     #banner-pubblicitario {
       width: 100%;
       background: #1a2a3a;
@@ -145,25 +141,23 @@
 
   <div id="controls">
     <div class="input-group">
-      <input type="number" id="endHour" min="0" max="23" value="12">
+      <input type="number" id="endHour" min="0" max="23" value="12" placeholder="Ore">
       <div class="input-label">Ore</div>
     </div>
     <div class="input-group">
-      <input type="number" id="endMinute" min="0" max="59" value="00">
+      <input type="number" id="endMinute" min="0" max="59" value="00" placeholder="Minuti">
       <div class="input-label">Minuti</div>
     </div>
-    <div class="button-group">
-      <button onclick="startCountdown()">Start Countdown</button>
-    </div>
-    <div class="button-group">
-      <button id="fullscreen-btn" onclick="enterFullscreen()">Fullscreen</button>
-    </div>
+    <button onclick="startCountdown()">Start Countdown</button>
+    <button id="fullscreen-btn" onclick="enterFullscreen()">Fullscreen</button>
   </div>
 
   <div id="countdown">00:00:00</div>
 
+  <!-- Bottone X per uscire dal fullscreen -->
   <button id="exit-fullscreen-btn" onclick="exitFullscreen()">×</button>
 
+  <!-- Banner pubblicitario fisso in basso -->
   <div id="banner-pubblicitario">
     📢 Il tuo banner qui — spazio disponibile per monetizzare la pagina!
   </div>
